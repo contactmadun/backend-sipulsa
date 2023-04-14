@@ -5,10 +5,10 @@ const {
   DB_PASSWORD,
   DB_HOSTNAME,
   DB_NAME,
-  DB_DIALECT,
+  DB_DIALECT
 } = process.env;
 
-module.exports ={
+module.exports = {
   "development": {
     "username": DB_USERNAME,
     "password": DB_PASSWORD,
