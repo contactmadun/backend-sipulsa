@@ -19,3 +19,28 @@ Content-Type: application/json
     "email": "aditya@gmail.com",
     "password": "12345678"
 }
+
+###
+POST http://localhost:3000/category
+Content-Type: application/json
+
+{
+    "name": "Adaptor"
+}
+
+###
+GET http://localhost:3000/category
+
+###
+DELETE http://localhost:3000/category/7 
+
+###
+POST http://localhost:3000/brand
+Content-Type: application/json
+
+{
+    "name": "Robot"
+}
+
+###
+GET http://localhost:3000/brand
