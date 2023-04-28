@@ -1,5 +1,5 @@
 const { getUsers, registerUsers, login, logout } = require('../controllers/User');
-const { verifyToken } = require('../middleware/VerifyToken');
+// const { verifyToken } = require('../middleware/verifyToken');
 const { refreshToken } = require('../controllers/RefreshToken');
 
 var express = require('express');

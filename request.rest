@@ -44,3 +44,28 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/brand
+
+
+###
+GET http://localhost:3000/product
+
+###
+POST http://localhost:3000/product
+Content-Type: application/json
+
+{
+    "name": "Vgen Cable Lightning",
+    "categoryId": 1,
+    "brandId": 2
+}
+
+###
+PUT http://localhost:3000/product/4
+Content-Type: application/json
+
+{
+    "stok": "tersedia"
+}
+
+###
+GET http://localhost:3000/product/limit
