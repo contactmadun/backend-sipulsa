@@ -1,9 +1,14 @@
 const Validator = require('fastest-validator');
 const v = new Validator();
 const { Brand } = require('../models');
+// var os = require('os');
 
 exports.getDataBrand = async (req, res) => {
     try {
+        // check IP Addres local development
+        // var networkInterfaces = os.networkInterfaces();
+        // const data = req.socket.remoteAddress;
+        // res.send(networkInterfaces);
         const data = await Brand.findAll();
         res.json(data);
     } catch (error) {

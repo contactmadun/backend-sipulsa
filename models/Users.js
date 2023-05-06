@@ -46,12 +46,16 @@ module.exports = (Sequelize, DataTypes) => {
             type: DataTypes.INTEGER
           },
           status: {
-            type: DataTypes.INTEGER
+            type: DataTypes.ENUM("pending", "active", "disabled"),
+            defaultValue: "pending"
           },
           uplink: {
             type: DataTypes.STRING
           },
           imageProfil: {
+            type: DataTypes.STRING
+          },
+          confirmationCode: {
             type: DataTypes.STRING
           },
           referal: {

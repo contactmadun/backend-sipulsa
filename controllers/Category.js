@@ -22,23 +22,10 @@ exports.registerCategory = async (req, res) => {
         .status(400)
         .json(validate);
     }
-    let getDataCategory = await Category.findOne({
-        where:{
-            name: req.body.name
-        }
+    await Category.create({
+        name: req.body.name
     });
-    if(getDataCategory !=null){
-        res.json({message: 'Data sudah ada!'});
-    }else{
-        try {
-            await Category.create({
-                name: req.body.name
-            });
-            res.json({message: 'Data berhasil disimpan'});
-        } catch (error) {
-            console.log(error);
-        }
-    }
+    res.json({message: 'Data berhasil disimpan'});
 }
 
 exports.deleteCategory = async (req,res) => {

@@ -54,12 +54,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       status: {
-        type: Sequelize.INTEGER
+        type: Sequelize.ENUM("pending", "active", "disabled"),
+        defaultValue: "pending"
       },
       uplink: {
         type: Sequelize.STRING
       },
       imageProfil: {
+        type: Sequelize.STRING
+      },
+      confirmationCode: {
         type: Sequelize.STRING
       },
       referal: {

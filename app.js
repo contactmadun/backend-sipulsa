@@ -11,6 +11,8 @@ var usersRouter = require('./routes/users');
 var categoryRouter = require('./routes/category');
 var brandRouter = require('./routes/brand');
 var productRouter = require('./routes/product');
+var verifyRouter = require('./routes/verify');
+var digiflazzRouter = require('./routes/digiflazz');
 
 var app = express();
 const fileStorage = multer.diskStorage({
@@ -40,7 +42,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors({
     origin: [
         'http://localhost:8080',
-        'https://localhost:8080'
+        'https://localhost:8080',
+        'http://sipulsa.site',
+        'https://sipulsa.site'
     ],
     credentials: true,
     exposedHeaders: ['set-cookie']
@@ -51,5 +55,7 @@ app.use('/users', usersRouter);
 app.use('/category', categoryRouter);
 app.use('/brand', brandRouter);
 app.use('/product', productRouter);
+app.use('/verify', verifyRouter);
+app.use('/digiflazz', digiflazzRouter);
 
 module.exports = app;

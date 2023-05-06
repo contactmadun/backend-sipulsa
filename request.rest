@@ -69,3 +69,9 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/product/limit
+
+###
+POST http://localhost:3000/verify/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpemtpLmlsaGFtaTMxQGdtYWlsLmNvbSIsImlhdCI6MTY4MzA0MDMzNn0.E0JJ4VPPyCc31hVZ1ZVxk60carOHi2A-EJYxsFg3zYw
+
+###
+GET http://localhost:3000/digiflazz
