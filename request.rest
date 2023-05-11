@@ -75,3 +75,17 @@ POST http://localhost:3000/verify/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpb
 
 ###
 GET http://localhost:3000/digiflazz
+
+###
+GET http://localhost:3000/digiflazz/prepaid
+
+###
+GET http://localhost:3000/pulsa
+
+###
+POST http://localhost:3000/pulsa
+Content-Type: application/json
+
+{
+    "name": "SMARTFREN"
+}
