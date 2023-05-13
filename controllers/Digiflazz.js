@@ -90,3 +90,22 @@ exports.getDataPrepaid = async (req, res) => {
         console.log(error);
     }
 }
+
+exports.topUpPrepaid = async (code, target, refId) => {
+    try {
+        const username = 'vapiseoE7dxW';
+        // const sign = 'vapiseoE7dxWe0549218-906c-57f3-9671-8f599e3bee9f'+refId;
+        const sign = md5('vapiseoE7dxWe0549218-906c-57f3-9671-8f599e3bee9f'+refId);
+        // console.log(sign);
+        const response = await axios.post('https://api.digiflazz.com/v1/transaction',{
+            username: username,
+            buyer_sku_code: code,
+            customer_no: target,
+            ref_id: refId,
+            sign: sign
+        });
+        return response;
+    } catch (error) {
+        console.log(error);
+    }
+}
