@@ -20,6 +20,9 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      typeProduct: {
+        type: Sequelize.STRING,
+      },
       code: {
         type: Sequelize.STRING,
         allowNull: false

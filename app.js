@@ -15,6 +15,10 @@ var verifyRouter = require('./routes/verify');
 var digiflazzRouter = require('./routes/digiflazz');
 var depositRouter = require('./routes/deposit');
 var pulsaRouter = require('./routes/pulsa');
+var transaksiRouter = require('./routes/transaction');
+var productServerRouter = require('./routes/productServer');
+var dataRouter = require('./routes/data');
+var ewalletRouter = require('./routes/ewallet');
 
 var app = express();
 const fileStorage = multer.diskStorage({
@@ -61,5 +65,9 @@ app.use('/verify', verifyRouter);
 app.use('/digiflazz', digiflazzRouter);
 app.use('/deposit', depositRouter);
 app.use('/pulsa', pulsaRouter);
+app.use('/transaksi', transaksiRouter);
+app.use('/productserver', productServerRouter);
+app.use('/data', dataRouter);
+app.use('/ewallet', ewalletRouter);
 
 module.exports = app;
